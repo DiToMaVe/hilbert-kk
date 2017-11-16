@@ -47,11 +47,11 @@ eta_smpl = inv_cdf_H(urv);
 
 % Compare histogram of sampled eta and pdf of eta
 figure()
-[hy, hx] = hist(eta_smpl,50);            % get histogram values
-hy = hy/numel(eta_smpl)/(hx(2)-hx(1));   % normalize histogram
-bar(hx, hy,'m')                     % plot histogram
+[hy, hx] = hist(eta_smpl,50);             % get histogram values
+hy = hy/numel(eta_smpl)/(hx(2)-hx(1));    % normalize histogram
+bar(hx, hy,'m')                           % plot histogram
 hold on
-plot(eta,pdf_H(eta),'LineWidth',2)  % plot pdf
+plot(eta,pdf_H(eta),'LineWidth',2)        % plot pdf
 
 
 
