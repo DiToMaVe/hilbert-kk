@@ -1,4 +1,4 @@
-function [I1, u] = compute_integral_I1(integrand, ug, Nu, omega)
+function I1 = compute_integral_I1(integrand, ug, Nu, omega)
 
 % Computation of random matrix [I1(omega)], Eq. (52) in Capillon,
 % Desceliers & Soize (2016). The limit eta->0+ is taken into account by
