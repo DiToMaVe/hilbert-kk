@@ -43,12 +43,12 @@ Ns = 500000;
 
 % Sample from uniform distribution (uniform random variable)
 urv = rand(1,Ns);
-Eta = inv_cdf_H(urv);
+eta_smpl = inv_cdf_H(urv);
 
 % Compare histogram of sampled eta and pdf of eta
 figure()
-[hy, hx] = hist(Eta,50);            % get histogram values
-hy = hy/numel(Eta)/(hx(2)-hx(1));   % normalize histogram
+[hy, hx] = hist(eta_smpl,50);            % get histogram values
+hy = hy/numel(eta_smpl)/(hx(2)-hx(1));   % normalize histogram
 bar(hx, hy,'m')                     % plot histogram
 hold on
 plot(eta,pdf_H(eta),'LineWidth',2)  % plot pdf
