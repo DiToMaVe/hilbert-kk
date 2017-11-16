@@ -1,12 +1,13 @@
 function [I1, u] = compute_integral_I1(integrand, ug, Nu, omega)
 
-% Eq. (52) in Capillon, Desceliers & Soize (2016).The limit eta->0+ is
-% taken into account by sampling the value of the integrand at the sampling
-% points {ui, i=1,...,Nu, ui~=1} with a constant step << 1 of the interval
-% [0, ug], and shifting the grid such that the singular point is exactly
-% halfway in between two sampling points. The first and last point are then
-% fixed to 0 and ug respectively. As a result the step is constant except
-% for the first and last interval.
+% Computation of random matrix [I1(omega)], Eq. (52) in Capillon,
+% Desceliers & Soize (2016). The limit eta->0+ is taken into account by
+% sampling the value of the integrand at the sampling points {ui,
+% i=1,...,Nu, ui~=1} with a constant step << 1 of the interval [0, ug], and
+% shifting the grid such that the singular point is exactly halfway in
+% between two sampling points. The first and last point are then fixed to 0
+% and ug respectively. As a result the step is constant except for the
+% first and last interval.
 
 du = ug/(Nu-1);     % stepsize (except for the first and last interval)
 u = [0:Nu-1]*du;    % sampling points, before shifting the grid
