@@ -28,7 +28,6 @@ Ns = 100;
 I2 = compute_integral_I2(ft, t', ug, Nq, Ns);
 I = I1+I2;
 
-%%
 % Plot Hilbert transform pair: analytical expression and numerical solution
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
